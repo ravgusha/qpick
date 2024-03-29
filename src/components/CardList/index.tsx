@@ -11,12 +11,13 @@ interface ICard {
 
 interface ICardlist {
   elements: ICard[];
+  title: string;
 }
 
-const CardList = ({ elements }: ICardlist) => {
+const CardList = ({ elements, title }: ICardlist) => {
   return (
     <div className="cardlist">
-      <h2>Наушники</h2>
+      <h2 className='cardlist_title'>{title}</h2>
       <div className="card-container">
         {elements.map((element: ICard) => (
           <Card
