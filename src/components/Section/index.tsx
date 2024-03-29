@@ -1,3 +1,15 @@
+import Card from '../Card';
+import CardList from '../CardList';
+
+import './style.scss';
+
+interface IItem {
+  img: string;
+  title: string;
+  price: string;
+  rate: string;
+}
+
 const Section = () => {
   const headphones = [
     {
@@ -8,13 +20,13 @@ const Section = () => {
     },
     {
       img: require('../../assets/2.png'),
-      title: 'Apple EarPod',
+      title: 'Apple EarPods',
       price: '2327',
       rate: '4.5',
     },
     {
       img: require('../../assets/3.png'),
-      title: 'Apple EarPod',
+      title: 'Apple EarPods',
       price: '2927',
       rate: '4.7',
     },
@@ -22,15 +34,7 @@ const Section = () => {
 
   return (
     <div className="container">
-      <h2>Наушники</h2>
-      {headphones.map((element) => (
-        <div>
-          <img src={element.img} alt="" />
-          <h3>{element.title}</h3>
-          <p>{element.price}</p>
-          <p>{element.rate}</p>
-        </div>
-      ))}
+      <CardList elements={headphones} />
     </div>
   );
 };
