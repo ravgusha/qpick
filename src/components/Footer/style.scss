@@ -1,0 +1,61 @@
+.footer {
+  padding: 29px;
+  background-color: #fff;
+  margin-top: 20px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+
+  &_lang {
+    display: flex;
+    gap: 17px;
+    align-items: center;
+
+    button {
+      border: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      background-color: transparent;
+      font-size: 19px;
+    }
+  }
+  &_nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 174px;
+  }
+
+  .lang-icon {
+    display: inline-flex;
+    height: 20px;
+    width: 20px;
+    background-image: url('../../assets/earth.svg');
+    // background-position: center;
+  }
+
+  .footer_links {
+    display: flex;
+    gap: 18px;
+  }
+
+  .footer-social {
+    display: inline-flex;
+    height: 32px;
+    width: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &.vk {
+      background-image: url('../../assets/VK.svg');
+    }
+
+    &.telegram {
+      background-image: url('../../assets/Telegram.svg');
+    }
+
+    &.whats {
+      background-image: url('../../assets/Whatsapp.svg');
+    }
+  }
+}
