@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Logo from '../Logo';
 
 import './style.scss';
@@ -9,7 +10,9 @@ const Header = () => {
         <Logo />
         <div className="header-right">
           <button className="btn-favs"></button>
-          <button className="btn-card"></button>
+          <Link to="/cart">
+            <button className="btn-card"></button>
+          </Link>
         </div>
       </div>
     </header>

@@ -1,13 +1,11 @@
-import "./style.scss";
+import { Link } from 'react-router-dom';
+import './style.scss';
 
 const Logo = () => {
-
   return (
-    <div
-      className="logo"
-    >
-      <h1>Qpick</h1>
-    </div>
+    <Link className="logo" to="/">
+      Qpick
+    </Link>
   );
 };
 

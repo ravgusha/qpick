@@ -7,6 +7,7 @@ interface ICard {
   title: string;
   price: string;
   rate: string;
+  id: number;
 }
 
 interface ICardlist {
@@ -17,10 +18,11 @@ interface ICardlist {
 const CardList = ({ elements, title }: ICardlist) => {
   return (
     <div className="cardlist">
-      <h2 className='cardlist_title'>{title}</h2>
+      <h2 className="cardlist_title">{title}</h2>
       <div className="card-container">
         {elements.map((element: ICard) => (
           <Card
+            key={element.id}
             img={element.img}
             title={element.title}
             price={element.price}
