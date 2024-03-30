@@ -39,6 +39,20 @@
     .card_rate {
       color: #838383;
     }
+    .card_buy {
+      outline: none;
+      border: none;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+      background-color: transparent;
+      cursor: pointer;
+
+      &:hover {
+        color: #ffa542;
+        transition: 0.3s ease 0s;
+      }
+    }
 
     .card_rate::before {
       content: url('../../assets/star.svg');

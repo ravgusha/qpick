@@ -18,12 +18,33 @@
       font-weight: 500;
       background-color: transparent;
       font-size: 19px;
+      cursor: pointer;
+
+      &:hover {
+        color: #ffa542;
+        transition: 0.3s ease 0s;
+      }
     }
   }
   &_nav {
     display: flex;
     flex-wrap: wrap;
     gap: 174px;
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      a {
+        text-decoration: none;
+        color: #000;
+
+        &:hover {
+          color: #888;
+        }
+      }
+    }
   }
 
   .lang-icon {
@@ -45,6 +66,11 @@
     width: 30px;
     background-repeat: no-repeat;
     background-position: center;
+
+    &:hover {
+      filter: invert(78%) sepia(7%) saturate(2606%) hue-rotate(164deg)
+        brightness(100%) contrast(93%);
+    }
 
     &.vk {
       background-image: url('../../assets/VK.svg');

@@ -15,6 +15,11 @@ header {
       border: 0;
       padding: 0;
       cursor: pointer;
+
+      &:hover {
+        filter: invert(78%) sepia(7%) saturate(2606%) hue-rotate(164deg)
+          brightness(100%) contrast(93%);
+      }
     }
 
     .btn-favs {

@@ -17,7 +17,7 @@ const Card = ({ img, price, title, rate }: IItem) => {
         <p className="card_title">{title}</p>
         <p className="card_price">{price} ₽</p>
         <p className="card_rate">{rate}</p>
-        <p className="card_buy">Купить</p>
+        <button className="card_buy">Купить</button>
       </div>
     </div>
   );

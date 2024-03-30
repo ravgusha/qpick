@@ -4,4 +4,9 @@
   font-size: 25px;
   text-decoration: none;
   text-transform: uppercase;
+
+  &:hover {
+    color: #7cd0f6;
+    transition: 0.3s ease 0s;
+  }
 }

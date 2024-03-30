@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Logo from '../Logo';
 
 import './style.scss';
@@ -8,12 +9,12 @@ const Footer = () => {
       <Logo />
       <div className="footer_nav">
         <div className="column">
-          <p>Избранное</p>
-          <p>Корзина</p>
-          <p>Контакты</p>
+          <Link to="/">Избранное</Link>
+          <Link to="/">Корзина</Link>
+          <Link to="/">Контакты</Link>
         </div>
         <div className="column">
-          <p>Условия сервиса</p>
+        <Link to="/">Условия сервиса</Link>
           <div className="footer_lang">
             <i className="lang-icon"></i>
             <button>Рус</button>
@@ -28,7 +29,6 @@ const Footer = () => {
           target="_blank"
           rel="noreferrer"
         >
-          {' '}
         </a>
         <a
           className="footer-social telegram"
