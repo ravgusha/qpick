@@ -6,6 +6,7 @@
     background-color: #fff;
     border-radius: 30px;
     width: 633px;
+    margin-bottom: 20px;
 
     &_info {
       display: flex;
@@ -57,13 +58,22 @@
   }
   .increment-btn,
   .decrement-btn {
-    height: 31px;
+    display: inline-flex;
+    align-items: center;
+    height: 30px;
     width: 30px;
     border-radius: 50%;
     font-size: 27px;
     background-color: #ffce7f;
     border: 1px solid #ffce7f;
     color: white;
+    cursor: pointer;
+    &:disabled,
+    &[disabled] {
+      border: 1px solid #999999;
+      background-color: #cccccc;
+      color: #666666;
+    }
   }
 
   .counter-value {

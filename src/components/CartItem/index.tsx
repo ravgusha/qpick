@@ -1,3 +1,5 @@
+import { useDispatch } from 'react-redux';
+import { updateCartAmount } from '../../cartSlice';
 import './style.scss';
 
 interface IItem {
@@ -5,9 +7,13 @@ interface IItem {
   title: string;
   price: string;
   rate: string;
+  id: number;
+  amount?: number;
 }
 
-const CartItem = ({ img, price, title, rate }: IItem) => {
+const CartItem = ({ img, price, title, id, amount }: IItem) => {
+  const dispatch = useDispatch();
+
   return (
     <div className="cart-item">
       <div className="card-item_block">
@@ -22,9 +28,24 @@ const CartItem = ({ img, price, title, rate }: IItem) => {
 
       <div className="card-item_block bottom">
         <div className="counter">
-          <button className="increment-btn">&#8722;</button>
-          <div className="counter-value">1</div>
-          <button className="decrement-btn">+</button>
+          <button
+            className="increment-btn"
+            disabled={amount === 1}
+            onClick={() =>
+              dispatch(updateCartAmount({ id: id, type: 'decrement' }))
+            }
+          >
+            &#8722;
+          </button>
+          <div className="counter-value">{amount}</div>
+          <button
+            className="decrement-btn"
+            onClick={() =>
+              dispatch(updateCartAmount({ id: id, type: 'increment' }))
+            }
+          >
+            +
+          </button>
         </div>
         <p className="cart-item_sum">2927 ₽</p>
       </div>

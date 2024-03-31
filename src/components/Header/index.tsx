@@ -5,13 +5,13 @@ import './style.scss';
 import { useSelector } from 'react-redux';
 import { ICard } from '../Card';
 
-interface IState {
+export interface IState {
   cartItems: ICard[];
   amount: number;
   total: number;
 }
 
-interface IStore {
+export interface IStore {
   cart: IState;
 }
 
