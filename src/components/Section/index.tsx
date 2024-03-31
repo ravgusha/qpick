@@ -74,8 +74,8 @@ const Section = () => {
 
   return (
     <div className="container">
-      <CardList title={'Наушники'} elements={headphones} />
-      <CardList title={'Беспроводные наушники'} elements={wireless} />
+      <CardList title={'Наушники'} products={headphones} />
+      <CardList title={'Беспроводные наушники'} products={wireless} />
     </div>
   );
 };
