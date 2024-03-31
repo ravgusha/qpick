@@ -3,9 +3,20 @@ import Logo from '../Logo';
 
 import './style.scss';
 import { useSelector } from 'react-redux';
+import { ICard } from '../Card';
+
+interface IState {
+  cartItems: ICard[];
+  amount: number;
+  total: number;
+}
+
+interface IStore {
+  cart: IState;
+}
 
 const Header = () => {
-  const count = useSelector((state) => state.cart.amount)
+  const count = useSelector((state: IStore) => state.cart.amount);
 
   return (
     <header>
@@ -13,8 +24,8 @@ const Header = () => {
         <Logo />
         <div className="header-right">
           <button className="btn-favs"></button>
-          <Link to="/cart"  className="btn-cart">
-            <span className="cart-count">{count}</span>
+          <Link to="/cart" className="btn-cart">
+            {count ? <span className="cart-count">{count}</span> : null}
             <button></button>
           </Link>
         </div>

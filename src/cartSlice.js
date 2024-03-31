@@ -1,7 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 
-const initialState = {
+// interface IState {
+//     cartItems: ICard[],
+//     amount: number,
+//     total: number,
+//   }
+
+
+const initialState  = {
     cartItems: [],
     amount: 0,
     total: 0,

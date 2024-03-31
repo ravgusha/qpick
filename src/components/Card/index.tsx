@@ -2,15 +2,14 @@ import { useDispatch } from 'react-redux';
 import './style.scss';
 import { addToCart } from '../../cartSlice';
 
-
-interface ICard {
+export interface ICard {
   img: string;
   title: string;
   price: string;
   rate: string;
   id: number;
+  amount?: number;
 }
-
 
 const Card = ({ img, price, title, rate, id }: ICard) => {
   const dispatch = useDispatch();
