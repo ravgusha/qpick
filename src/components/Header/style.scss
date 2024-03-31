@@ -1,0 +1,56 @@
+.header {
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    button {
+      border: 0;
+      padding: 0;
+      cursor: pointer;
+
+      &:hover {
+        filter: invert(78%) sepia(7%) saturate(2606%) hue-rotate(164deg)
+          brightness(100%) contrast(93%);
+      }
+    }
+
+    .btn-favs {
+      height: 20px;
+      width: 23px;
+      background: url('../../assets/favotites.svg') no-repeat;
+    }
+
+    .btn-cart {
+      height: 25px;
+      width: 25px;
+      background: url('../../assets/busket.svg') no-repeat;
+      position: relative;
+    }
+
+    .cart-count {
+      font-size: 14px;
+      color: #fff;
+      width: 18px;
+      height: 18px;
+      border-radius: 15px;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 13px;
+      left: 15px;
+      background: #ffa542;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+.footer {
+  padding: 29px;
+  background-color: #fff;
+  margin-top: 20px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+
+  &_lang {
+    display: flex;
+    gap: 17px;
+    align-items: center;
+
+    button {
+      border: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      background-color: transparent;
+      font-size: 19px;
+      cursor: pointer;
+
+      &:hover {
+        color: #ffa542;
+        transition: 0.3s ease 0s;
+      }
+    }
+  }
+  &_nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 174px;
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      a {
+        text-decoration: none;
+        color: #000;
+
+        &:hover {
+          color: #888;
+        }
+      }
+    }
+  }
+
+  &_links {
+    display: flex;
+    gap: 18px;
+  }
+
+  &-social {
+    display: inline-flex;
+    height: 32px;
+    width: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:hover {
+      filter: invert(78%) sepia(7%) saturate(2606%) hue-rotate(164deg)
+        brightness(100%) contrast(93%);
+    }
+
+    &.vk {
+      background-image: url('../../assets/VK.svg');
+    }
+
+    &.telegram {
+      background-image: url('../../assets/Telegram.svg');
+    }
+
+    &.whats {
+      background-image: url('../../assets/Whatsapp.svg');
+    }
+  }
+
+  .lang-icon {
+    display: inline-flex;
+    height: 20px;
+    width: 20px;
+    background-image: url('../../assets/earth.svg');
+  }
+}

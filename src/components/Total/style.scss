@@ -1,0 +1,28 @@
+.total-block {
+  background-color: #fff;
+  border-radius: 30px;
+  min-width: 345px;
+  margin-top: 10px;
+
+  &_top {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 19px;
+  }
+
+  button {
+    cursor: pointer;
+    border-radius: 17px;
+    outline: none;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    padding: 22px 0;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+  }
+}

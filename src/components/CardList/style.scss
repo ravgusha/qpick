@@ -1,0 +1,11 @@
+.cardlist {
+  &_title {
+    color: #838383;
+  }
+  
+  .card-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+}
