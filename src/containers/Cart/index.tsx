@@ -14,7 +14,11 @@ const Cart = () => {
       <p className="cart-header">Корзина</p>
       <div className="cart-container">
         <div className="cart-list">
-          <CardList products={cartItems} />
+          {cartItems && cartItems.length ? (
+            <CardList products={cartItems} />
+          ) : (
+            <p className="empty"> В корзине пока пусто </p>
+          )}
         </div>
         <Total />
       </div>
