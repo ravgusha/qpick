@@ -1,28 +1,10 @@
-import { useSelector } from 'react-redux';
 import Card from '../Card';
 import CartItem from '../CartItem';
+import { ICard, ICardlist } from '../../types';
 
 import './style.scss';
-import { IStore } from '../Header';
-
-interface ICard {
-  img: string;
-  title: string;
-  price: string;
-  rate: string;
-  id: number;
-  amount?: number;
-}
-
-interface ICardlist {
-  products: ICard[];
-  title?: string;
-  type?: string;
-}
 
 const CardList = ({ products, title, type }: ICardlist) => {
-  const { cartItems } = useSelector((state: IStore) => state.cart);
-
   if (type === 'catalog') {
     return (
       <div className="cardlist">
@@ -44,7 +26,7 @@ const CardList = ({ products, title, type }: ICardlist) => {
   } else {
     return (
       <div>
-        {cartItems.map((product: ICard) => (
+        {products.map((product: ICard) => (
           <CartItem
             id={product.id}
             key={product.id}

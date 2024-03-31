@@ -47,20 +47,12 @@
     }
   }
 
-  .lang-icon {
-    display: inline-flex;
-    height: 20px;
-    width: 20px;
-    background-image: url('../../assets/earth.svg');
-    // background-position: center;
-  }
-
-  .footer_links {
+  &_links {
     display: flex;
     gap: 18px;
   }
 
-  .footer-social {
+  &-social {
     display: inline-flex;
     height: 32px;
     width: 30px;
@@ -83,5 +75,12 @@
     &.whats {
       background-image: url('../../assets/Whatsapp.svg');
     }
+  }
+
+  .lang-icon {
+    display: inline-flex;
+    height: 20px;
+    width: 20px;
+    background-image: url('../../assets/earth.svg');
   }
 }

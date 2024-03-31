@@ -1,6 +1,8 @@
 import { useSelector } from 'react-redux';
+
+import { IStore } from '../../types';
+
 import './style.scss';
-import { IStore } from '../Header';
 
 const Total = () => {
   const { total } = useSelector((state: IStore) => state.cart);

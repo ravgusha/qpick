@@ -1,19 +1,12 @@
 import { useDispatch } from 'react-redux';
-import './style.scss';
-import { addToCart } from '../../cartSlice';
 
-export interface ICard {
-  img: string;
-  title: string;
-  price: string;
-  rate: string;
-  id: number;
-  amount?: number;
-}
+import { addToCart } from '../../cartSlice';
+import { ICard } from '../../types';
+
+import './style.scss';
 
 const Card = ({ img, price, title, rate, id }: ICard) => {
   const dispatch = useDispatch();
-  // console.log(product);
   const product = {
     id: id,
     title: title,

@@ -5,7 +5,7 @@
   border-radius: 30px;
   padding: 10px 20px 26px 20px;
 
-  .card_image {
+  &_image {
     width: 220px;
     height: 247px;
     display: flex;
@@ -26,40 +26,41 @@
     p {
       margin: 0;
     }
+  }
 
-    .card_price {
-      text-align: right;
+  &_price {
+    text-align: right;
+    color: #ffa542;
+  }
+
+  &_title {
+    color: #1c1c27;
+  }
+
+  &_rate {
+    color: #838383;
+  }
+  
+  &_buy {
+    outline: none;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover {
       color: #ffa542;
+      transition: 0.3s ease 0s;
     }
+  }
 
-    .card_title {
-      color: #1c1c27;
-    }
-
-    .card_rate {
-      color: #838383;
-    }
-    .card_buy {
-      outline: none;
-      border: none;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 600;
-      font-size: 17px;
-      background-color: transparent;
-      cursor: pointer;
-
-      &:hover {
-        color: #ffa542;
-        transition: 0.3s ease 0s;
-      }
-    }
-
-    .card_rate::before {
-      content: url('../../assets/star.svg');
-      height: 22px;
-      width: 23px;
-      padding-right: 6px;
-      vertical-align: middle;
-    }
+  &_rate::before {
+    content: url('../../assets/star.svg');
+    height: 22px;
+    width: 23px;
+    padding-right: 6px;
+    vertical-align: middle;
   }
 }

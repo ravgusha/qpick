@@ -1,11 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-// interface IState {
-//     cartItems: ICard[],
-//     amount: number,
-//     total: number,
-//   }
-
 const initialState = {
   cartItems: [],
   amount: 0,
@@ -16,11 +10,6 @@ const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
-    // removeItem: (state, action) => {
-    //     const itemId = action.payload;
-    //     state.cartItems = state.cartItems.filter((item) => item.id !== itemId)
-    //     cartSlice.caseReducers.calculateTotals(state);
-    // },
     updateCartAmount: (state, action) => {
       const cartItem = state.cartItems.find(
         (item) => item.id === action.payload.id

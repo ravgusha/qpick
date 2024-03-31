@@ -1,25 +1,16 @@
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
 import Logo from '../Logo';
+import { IStore } from '../../types';
 
 import './style.scss';
-import { useSelector } from 'react-redux';
-import { ICard } from '../Card';
-
-export interface IState {
-  cartItems: ICard[];
-  amount: number;
-  total: number;
-}
-
-export interface IStore {
-  cart: IState;
-}
 
 const Header = () => {
   const count = useSelector((state: IStore) => state.cart.amount);
 
   return (
-    <header>
+    <header className="header">
       <div className="header-container">
         <Logo />
         <div className="header-right">

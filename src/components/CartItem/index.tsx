@@ -1,22 +1,16 @@
 import { useDispatch } from 'react-redux';
+
 import { updateCartAmount } from '../../cartSlice';
+import { ICard } from '../../types';
+
 import './style.scss';
 
-interface IItem {
-  img: string;
-  title: string;
-  price: string;
-  rate: string;
-  id: number;
-  amount?: number;
-}
-
-const CartItem = ({ img, price, title, id, amount }: IItem) => {
+const CartItem = ({ img, price, title, id, amount }: ICard) => {
   const dispatch = useDispatch();
 
   return (
     <div className="cart-item">
-      <div className="card-item_block">
+      <div className="cart-item_block">
         <div className="cart-item_image">
           <img src={img} alt="" />
         </div>
@@ -26,10 +20,10 @@ const CartItem = ({ img, price, title, id, amount }: IItem) => {
         </div>
       </div>
 
-      <div className="card-item_block bottom">
+      <div className="cart-item_block bottom">
         <div className="counter">
           <button
-            className="increment-btn"
+            className="decrement-btn"
             disabled={amount === 1}
             onClick={() =>
               dispatch(updateCartAmount({ id: id, type: 'decrement' }))
@@ -39,7 +33,7 @@ const CartItem = ({ img, price, title, id, amount }: IItem) => {
           </button>
           <div className="counter-value">{amount}</div>
           <button
-            className="decrement-btn"
+            className="increment-btn"
             onClick={() =>
               dispatch(updateCartAmount({ id: id, type: 'increment' }))
             }
@@ -47,7 +41,7 @@ const CartItem = ({ img, price, title, id, amount }: IItem) => {
             +
           </button>
         </div>
-        <p className="cart-item_sum">2927 ₽</p>
+        <p className="cart-item_sum">{price} ₽</p>
       </div>
     </div>
   );
